@@ -659,6 +659,12 @@ function errorPage() {
                 }
                 if (n(activeLevel)) {
                     tn('body', 0).classList.remove('mod-game-playing');
+                    // Reset error page SVG if it exists
+                    if (!n(tn('sl-error-image', 0)) && !n(tn('sl-error-image', 0).getElementsByTagName('svg')[0])) {
+                        const errorSvg = tn('sl-error-image', 0).getElementsByTagName('svg')[0];
+                        errorSvg.style.marginTop = '';
+                        errorSvg.style.transform = '';
+                    }
                     if (!n(updateGame)) {
                         clearInterval(updateGame);
                     }
@@ -666,7 +672,9 @@ function errorPage() {
                         clearInterval(timer);
                     }
                     setTimeout(function () {
-                        id('mod-game').remove();
+                        if (!n(id('mod-game'))) {
+                            id('mod-game').remove();
+                        }
                     }, 320);
                     return;
                 }

@@ -41,3 +41,4 @@ Pull requests are welcome! Be clear about what you've changed, and I'll almost a
     # After this, add any attachment if needed
     ```
   - You don't have to fill in everything, only whatever applies.
+  - Make sure your pull request targets the correct base branch, and that both bases match.

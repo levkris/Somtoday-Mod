@@ -5,6 +5,11 @@ Somtoday Mod is a free browser-extension which adjusts the student website of So
 [![Button Edge]][EdgeLink]
 [![Button Firefox]][FirefoxLink]
 
+[![Stars](https://img.shields.io/github/stars/Jona-Zwetsloot/Somtoday-Mod?style=social)](https://github.com/Jona-Zwetsloot/Somtoday-Mod/stargazers)
+[![Forks](https://img.shields.io/github/forks/Jona-Zwetsloot/Somtoday-Mod?style=social)](https://github.com/Jona-Zwetsloot/Somtoday-Mod/network/members)
+[![Contributors](https://img.shields.io/github/contributors/Jona-Zwetsloot/Somtoday-Mod?style=social)](https://github.com/Jona-Zwetsloot/Somtoday-Mod/graphs/contributors)
+[![Open Issues](https://img.shields.io/github/issues/Jona-Zwetsloot/Somtoday-Mod)](https://github.com/Jona-Zwetsloot/Somtoday-Mod/issues)
+
 <br>
 
 # Install

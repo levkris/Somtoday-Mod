@@ -28,8 +28,8 @@ Pull requests are welcome! Be clear about what you've changed, and I'll almost a
       - What the issue is about, + based on issue #issueNumber (e.g. Night theme since the latest Somtoday Update, based on issue #41 )
 
     # If an update, and was not an issue:
-    - This PR updated:
-      - What you updated (e.g. Night theme svg, to make it look more modern)
+    - This PR modified:
+      - What you modified (e.g. Night theme svg, to make it look more modern)
 
     # If you added something new:
     - This PR introduced:
@@ -41,3 +41,4 @@ Pull requests are welcome! Be clear about what you've changed, and I'll almost a
     # After this, add any attachment if needed
     ```
   - You don't have to fill in everything, only whatever applies.
+  - Make sure your pull request targets the correct base branch, and that both bases match.

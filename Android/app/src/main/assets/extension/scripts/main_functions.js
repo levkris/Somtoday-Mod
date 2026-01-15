@@ -32,7 +32,6 @@ const saveCache = () => {
             type: "SAVE_CACHE",
             html: htmlContent
         });
-        console.log("Cache saved for URL:", window.location.href);
     }, 2000);
 };
 window.addEventListener('load', saveCache);

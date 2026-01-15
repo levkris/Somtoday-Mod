@@ -2,18 +2,30 @@
 
 // CACHE FOR ANDROID APP
 const saveCache = () => {
-    setTimeout(() => {
+    setTimeout(async () => {
         const docClone = document.documentElement.cloneNode(true);
-        const offline_line = document.createElement('div');
-        offline_line.innerHTML = `<div class="offline-line ng-star-inserted"></div>`;
 
-        const slRoot = docClone.querySelector('sl-root');
-        if (slRoot) {
-            slRoot.appendChild(offline_line);
-        } else {
-            const cloneBody = docClone.querySelector('body');
-            if (cloneBody) cloneBody.appendChild(offline_line);
+        let combinedCSS = '';
+
+        document.querySelectorAll('style').forEach(style => {
+            combinedCSS += style.innerHTML + '\n';
+        });
+
+        const styleSheets = Array.from(document.styleSheets);
+        for (const sheet of styleSheets) {
+            try {
+                if (sheet.href) {
+                    const res = await fetch(sheet.href);
+                    combinedCSS += await res.text() + '\n';
+                }
+            } catch (e) {}
         }
+
+        const styleTag = document.createElement('style');
+        styleTag.innerHTML = combinedCSS;
+
+        const cloneHead = docClone.querySelector('head');
+        if (cloneHead) cloneHead.appendChild(styleTag);
 
         const htmlContent = docClone.outerHTML;
         browser.runtime.sendNativeMessage("somtodaymod", {

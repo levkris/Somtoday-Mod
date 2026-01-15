@@ -140,7 +140,6 @@ class MainActivity : AppCompatActivity() {
                 if (message is org.json.JSONObject) {
                     val type = message.optString("type")
                     if (type == "SAVE_CACHE") {
-                        Log.d("SOMTODAY MOD", "Saving cache")
                         val html = message.optString("html")
                         saveHtmlToCache(html)
                     }
@@ -185,6 +184,7 @@ class MainActivity : AppCompatActivity() {
             val contentToSave = html.replace("<head>", "<head>$baseTag")
 
             File(filesDir, CACHE_FILE_NAME).writeText(contentToSave)
+
         } catch (e: Exception) {
             e.printStackTrace()
         }
